@@ -1,2 +1,7 @@
 ---
 # defaults file for egeneralov.zabbix-userparameter-postgresql
+
+zbx_server_url: http://127.0.0.1
+zbx_login_user: Admin
+zbx_login_password: zabbix
+zbx_template_name: PostgreSQL Simple Template

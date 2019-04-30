@@ -1,17 +1,24 @@
 egeneralov.zabbix-userparameter-postgresql
 ==========================================
 
-Provision zabbix monitoring for postgresql
+Provision zabbix monitoring for postgresql. Will be added userparameter and create extension for each database.
+
+Note: will be used `delegate_to: localhost`, so packages installation from `requirements.txt` is mandatory.
 
 Requirements
 ------------
 
-Supported debian-based os.
+Debian-based OS
 
 Role Variables
 --------------
 
-Variables from roles. New changes is added userparameter and create extension for databases.
+- **zbx_server_url**: `http://127.0.0.1`
+- **zbx_login_user**: `Admin`
+- **zbx_login_password**: `zabbix`
+- **zbx_template_name**: `PostgreSQL Simple Template`
+
+Also see variables from other roles.
 
 Dependencies
 ------------
@@ -26,6 +33,12 @@ Example Playbook
     ---
     - hosts: postgresql-servers
       vars:
+
+        zbx_server_url: http://zbx.company.tld
+        zbx_login_user: Admin
+        zbx_login_password: zabbix
+        zbx_template_name: PostgreSQL Simple Template
+
         zbx_version: 4.2
         zabbix_server: zabbix.company.tld
         

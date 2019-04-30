@@ -19,3 +19,12 @@
     name: pg_buffercache
     db: "{{ item.database }}"
   with_items: "{{ pgdg_users }}"
+
+- name: "configure : import template"
+  zabbix_template:
+    login_user: "{{ zbx_login_user }}"
+    login_password: "{{ zbx_login_password }}"
+    server_url: '{{ zbx_server_url }}'
+    template_name: "{{ zbx_template_name }}"
+    template_json: "{{ userparameter_tpl }}"
+  delegate_to: "localhost"

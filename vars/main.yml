@@ -1,2 +1,4205 @@
 ---
 # vars file for egeneralov.zabbix-userparameter-postgresql
+
+userparameter_tpl:
+  zabbix_export:
+    graphs:
+    - graph_items:
+      - calc_fnc: '2'
+        color: 00CC00
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.bgwriter.buffers_alloc[{$PG_CONNINFO}]'}
+        sortorder: '0'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: 0000CC
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.bgwriter.buffers_clean[{$PG_CONNINFO}]'}
+        sortorder: '1'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: CC0000
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.bgwriter.buffers_backend[{$PG_CONNINFO}]'}
+        sortorder: '2'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: CCCC00
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.bgwriter.buffers_checkpoint[{$PG_CONNINFO}]'}
+        sortorder: '3'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: '777777'
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.bgwriter.maxwritten_clean[{$PG_CONNINFO}]'}
+        sortorder: '4'
+        type: '0'
+        yaxisside: '0'
+      - calc_fnc: '2'
+        color: CC00CC
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.bgwriter.buffers_backend_fsync[{$PG_CONNINFO}]'}
+        sortorder: '5'
+        type: '0'
+        yaxisside: '0'
+      height: '200'
+      name: PostgreSQL bgwriter
+      percent_left: '0.0000'
+      percent_right: '0.0000'
+      show_3d: '0'
+      show_legend: '1'
+      show_triggers: '1'
+      show_work_period: '1'
+      type: '0'
+      width: '900'
+      yaxismax: '100.0000'
+      yaxismin: '0.0000'
+      ymax_item_1: '0'
+      ymax_type_1: '0'
+      ymin_item_1: '0'
+      ymin_type_1: '1'
+    - graph_items:
+      - calc_fnc: '2'
+        color: EEEEEE
+        drawtype: '5'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.buffercache.total[{$PG_CONNINFO}]'}
+        sortorder: '0'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: 0000EE
+        drawtype: '1'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.buffercache.used[{$PG_CONNINFO}]'}
+        sortorder: '1'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: 00EE00
+        drawtype: '1'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.buffercache.clear[{$PG_CONNINFO}]'}
+        sortorder: '2'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: EE0000
+        drawtype: '1'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.buffercache.dirty[{$PG_CONNINFO}]'}
+        sortorder: '3'
+        type: '0'
+        yaxisside: '1'
+      height: '200'
+      name: PostgreSQL buffers
+      percent_left: '0.0000'
+      percent_right: '0.0000'
+      show_3d: '0'
+      show_legend: '1'
+      show_triggers: '0'
+      show_work_period: '0'
+      type: '0'
+      width: '900'
+      yaxismax: '100.0000'
+      yaxismin: '0.0000'
+      ymax_item_1: '0'
+      ymax_type_1: '0'
+      ymin_item_1: '0'
+      ymin_type_1: '0'
+    - graph_items:
+      - calc_fnc: '2'
+        color: 00CC00
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.bgwriter.checkpoints_timed[{$PG_CONNINFO}]'}
+        sortorder: '0'
+        type: '0'
+        yaxisside: '0'
+      - calc_fnc: '2'
+        color: CC0000
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.bgwriter.checkpoints_req[{$PG_CONNINFO}]'}
+        sortorder: '1'
+        type: '0'
+        yaxisside: '0'
+      - calc_fnc: '2'
+        color: '000000'
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.bgwriter.checkpoint_sync_time[{$PG_CONNINFO}]'}
+        sortorder: '2'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: 0000CC
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.bgwriter.checkpoint_write_time[{$PG_CONNINFO}]'}
+        sortorder: '3'
+        type: '0'
+        yaxisside: '1'
+      height: '200'
+      name: PostgreSQL checkpoints
+      percent_left: '0.0000'
+      percent_right: '0.0000'
+      show_3d: '0'
+      show_legend: '1'
+      show_triggers: '1'
+      show_work_period: '1'
+      type: '0'
+      width: '900'
+      yaxismax: '100.0000'
+      yaxismin: '0.0000'
+      ymax_item_1: '0'
+      ymax_type_1: '0'
+      ymin_item_1: '0'
+      ymin_type_1: '1'
+    - graph_items:
+      - calc_fnc: '2'
+        color: EEEEEE
+        drawtype: '5'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.connections.total[{$PG_CONNINFO}]'}
+        sortorder: '0'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: 00BB00
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.connections.active[{$PG_CONNINFO}]'}
+        sortorder: '1'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: 0000BB
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.connections.idle[{$PG_CONNINFO}]'}
+        sortorder: '2'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: CC00CC
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.connections.idle_in_transaction[{$PG_CONNINFO}]'}
+        sortorder: '3'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: '000000'
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.connections.total_pct[{$PG_CONNINFO}]'}
+        sortorder: '4'
+        type: '0'
+        yaxisside: '0'
+      - calc_fnc: '2'
+        color: BB0000
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.connections.waiting[{$PG_CONNINFO}]'}
+        sortorder: '5'
+        type: '0'
+        yaxisside: '1'
+      height: '200'
+      name: PostgreSQL connections
+      percent_left: '0.0000'
+      percent_right: '100.0000'
+      show_3d: '0'
+      show_legend: '1'
+      show_triggers: '1'
+      show_work_period: '1'
+      type: '0'
+      width: '900'
+      yaxismax: '100.0000'
+      yaxismin: '0.0000'
+      ymax_item_1: '0'
+      ymax_type_1: '0'
+      ymin_item_1: '0'
+      ymin_type_1: '1'
+    - graph_items:
+      - calc_fnc: '2'
+        color: 00CC00
+        drawtype: '5'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.ping[{$PG_CONNINFO}]'}
+        sortorder: '0'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: CC0000
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.pgstatstatements.avg_query_time[{$PG_CONNINFO}]'}
+        sortorder: '1'
+        type: '0'
+        yaxisside: '1'
+      height: '200'
+      name: PostgreSQL service response
+      percent_left: '0.0000'
+      percent_right: '0.0000'
+      show_3d: '0'
+      show_legend: '1'
+      show_triggers: '1'
+      show_work_period: '1'
+      type: '0'
+      width: '900'
+      yaxismax: '100.0000'
+      yaxismin: '0.0000'
+      ymax_item_1: '0'
+      ymax_type_1: '0'
+      ymin_item_1: '0'
+      ymin_type_1: '0'
+    - graph_items:
+      - calc_fnc: '2'
+        color: 00CC00
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.dbstat.sum.blks_hit[{$PG_CONNINFO}]'}
+        sortorder: '0'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: CC0000
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.dbstat.sum.blks_read[{$PG_CONNINFO}]'}
+        sortorder: '1'
+        type: '0'
+        yaxisside: '1'
+      height: '200'
+      name: 'PostgreSQL summary db stats: block hit/read'
+      percent_left: '0.0000'
+      percent_right: '0.0000'
+      show_3d: '0'
+      show_legend: '1'
+      show_triggers: '1'
+      show_work_period: '1'
+      type: '0'
+      width: '900'
+      yaxismax: '100.0000'
+      yaxismin: '0.0000'
+      ymax_item_1: '0'
+      ymax_type_1: '0'
+      ymin_item_1: '0'
+      ymin_type_1: '1'
+    - graph_items:
+      - calc_fnc: '2'
+        color: 00CC00
+        drawtype: '5'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.dbstat.sum.xact_commit[{$PG_CONNINFO}]'}
+        sortorder: '0'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: 0000CC
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.dbstat.sum.conflicts[{$PG_CONNINFO}]'}
+        sortorder: '1'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: '000000'
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.dbstat.sum.deadlocks[{$PG_CONNINFO}]'}
+        sortorder: '2'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: CC0000
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.dbstat.sum.xact_rollback[{$PG_CONNINFO}]'}
+        sortorder: '3'
+        type: '0'
+        yaxisside: '1'
+      height: '200'
+      name: 'PostgreSQL summary db stats: events'
+      percent_left: '0.0000'
+      percent_right: '0.0000'
+      show_3d: '0'
+      show_legend: '1'
+      show_triggers: '1'
+      show_work_period: '1'
+      type: '0'
+      width: '900'
+      yaxismax: '100.0000'
+      yaxismin: '0.0000'
+      ymax_item_1: '0'
+      ymax_type_1: '0'
+      ymin_item_1: '0'
+      ymin_type_1: '1'
+    - graph_items:
+      - calc_fnc: '2'
+        color: CC0000
+        drawtype: '5'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.dbstat.sum.temp_bytes[{$PG_CONNINFO}]'}
+        sortorder: '0'
+        type: '0'
+        yaxisside: '0'
+      - calc_fnc: '2'
+        color: 0000CC
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.dbstat.sum.temp_files[{$PG_CONNINFO}]'}
+        sortorder: '1'
+        type: '0'
+        yaxisside: '1'
+      height: '200'
+      name: 'PostgreSQL summary db stats: temp files'
+      percent_left: '0.0000'
+      percent_right: '0.0000'
+      show_3d: '0'
+      show_legend: '1'
+      show_triggers: '1'
+      show_work_period: '1'
+      type: '0'
+      width: '900'
+      yaxismax: '100.0000'
+      yaxismin: '0.0000'
+      ymax_item_1: '0'
+      ymax_type_1: '0'
+      ymin_item_1: '0'
+      ymin_type_1: '1'
+    - graph_items:
+      - calc_fnc: '2'
+        color: '000000'
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.dbstat.sum.tup_deleted[{$PG_CONNINFO}]'}
+        sortorder: '0'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: 00CC00
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.dbstat.sum.tup_inserted[{$PG_CONNINFO}]'}
+        sortorder: '1'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: CC0000
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.dbstat.sum.tup_updated[{$PG_CONNINFO}]'}
+        sortorder: '2'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: 0000CC
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.dbstat.sum.tup_fetched[{$PG_CONNINFO}]'}
+        sortorder: '3'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: CC00CC
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.dbstat.sum.tup_returned[{$PG_CONNINFO}]'}
+        sortorder: '4'
+        type: '0'
+        yaxisside: '1'
+      height: '200'
+      name: 'PostgreSQL summary db stats: tuples'
+      percent_left: '0.0000'
+      percent_right: '0.0000'
+      show_3d: '0'
+      show_legend: '1'
+      show_triggers: '1'
+      show_work_period: '1'
+      type: '0'
+      width: '900'
+      yaxismax: '100.0000'
+      yaxismin: '0.0000'
+      ymax_item_1: '0'
+      ymax_type_1: '0'
+      ymin_item_1: '0'
+      ymin_type_1: '1'
+    - graph_items:
+      - calc_fnc: '2'
+        color: 00CC00
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.transactions.active[{$PG_CONNINFO}]'}
+        sortorder: '0'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: '000000'
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.transactions.idle[{$PG_CONNINFO}]'}
+        sortorder: '1'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: 00CCCC
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.transactions.prepared[{$PG_CONNINFO}]'}
+        sortorder: '2'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: CC0000
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.transactions.waiting[{$PG_CONNINFO}]'}
+        sortorder: '3'
+        type: '0'
+        yaxisside: '1'
+      height: '200'
+      name: PostgreSQL transactions
+      percent_left: '0.0000'
+      percent_right: '0.0000'
+      show_3d: '0'
+      show_legend: '1'
+      show_triggers: '1'
+      show_work_period: '1'
+      type: '0'
+      width: '900'
+      yaxismax: '100.0000'
+      yaxismin: '0.0000'
+      ymax_item_1: '0'
+      ymax_type_1: '0'
+      ymin_item_1: '0'
+      ymin_type_1: '1'
+    - graph_items:
+      - calc_fnc: '2'
+        color: 00CC00
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.cache.hit[{$PG_CONNINFO}]'}
+        sortorder: '0'
+        type: '0'
+        yaxisside: '0'
+      - calc_fnc: '2'
+        color: 0000CC
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.uptime[{$PG_CONNINFO}]'}
+        sortorder: '1'
+        type: '0'
+        yaxisside: '1'
+      height: '200'
+      name: PostgreSQL uptime
+      percent_left: '0.0000'
+      percent_right: '0.0000'
+      show_3d: '0'
+      show_legend: '1'
+      show_triggers: '1'
+      show_work_period: '1'
+      type: '0'
+      width: '900'
+      yaxismax: '100.0000'
+      yaxismin: '0.0000'
+      ymax_item_1: '0'
+      ymax_type_1: '0'
+      ymin_item_1: '0'
+      ymin_type_1: '1'
+    - graph_items:
+      - calc_fnc: '2'
+        color: 0000CC
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.wal.count[{$PG_CONNINFO}]'}
+        sortorder: '0'
+        type: '0'
+        yaxisside: '1'
+      - calc_fnc: '2'
+        color: 00CC00
+        drawtype: '0'
+        item: {host: PostgreSQL Simple Template, key: 'pgsql.wal.write[{$PG_CONNINFO}]'}
+        sortorder: '1'
+        type: '0'
+        yaxisside: '0'
+      height: '200'
+      name: PostgreSQL write-ahead log
+      percent_left: '0.0000'
+      percent_right: '0.0000'
+      show_3d: '0'
+      show_legend: '1'
+      show_triggers: '1'
+      show_work_period: '1'
+      type: '0'
+      width: '900'
+      yaxismax: '100.0000'
+      yaxismin: '0.0000'
+      ymax_item_1: '0'
+      ymax_type_1: '0'
+      ymin_item_1: '0'
+      ymin_type_1: '1'
+    groups:
+    - {name: EQUINIX.TESTE}
+    templates:
+    - applications:
+      - {name: Background Writer}
+      - {name: Buffers & Caches}
+      - {name: Configuration}
+      - {name: Connections}
+      - {name: Databases}
+      - {name: Database Status}
+      - {name: General Information}
+      - {name: Operations}
+      - {name: PostgreSQL}
+      - {name: Streaming Replication}
+      - {name: Table Info}
+      - {name: Transactions}
+      - {name: Write-Ahead Logging}
+      description: ''
+      discovery_rules:
+      - allowed_hosts: ''
+        authtype: '0'
+        delay: '3600'
+        description: PostgreSQL database discovery. Use regular expressions to configure
+          search.
+        filter:
+          conditions:
+          - {formulaid: A, macro: '{#DBNAME}', operator: '8', value: (zabbix|db_.*)}
+          evaltype: '0'
+          formula: ''
+        graph_prototypes:
+        - graph_items:
+          - calc_fnc: '2'
+            color: 00BB00
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.db.size[{$PG_CONNINFO},{#DBNAME}]'}
+            sortorder: '0'
+            type: '0'
+            yaxisside: '1'
+          height: '200'
+          name: 'PostgreSQL: database {#DBNAME} size'
+          percent_left: '0.0000'
+          percent_right: '0.0000'
+          show_3d: '0'
+          show_legend: '1'
+          show_triggers: '1'
+          show_work_period: '1'
+          type: '0'
+          width: '900'
+          yaxismax: '100.0000'
+          yaxismin: '0.0000'
+          ymax_item_1: '0'
+          ymax_type_1: '0'
+          ymin_item_1: '0'
+          ymin_type_1: '1'
+        host_prototypes: []
+        ipmi_sensor: ''
+        item_prototypes:
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Databases}
+          authtype: '0'
+          delay: '1800'
+          description: Single database size.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.db.size[{$PG_CONNINFO},{#DBNAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: database {#DBNAME} size
+          params: ''
+          password: ''
+          port: ''
+          preprocessing: []
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: b
+          username: ''
+          value_type: '3'
+          valuemap: []
+        jmx_endpoint: ''
+        key: pgsql.db.discovery[{$PG_CONNINFO}]
+        lifetime: 7d
+        name: PostgreSQL databases discovery
+        params: ''
+        password: ''
+        port: ''
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trigger_prototypes:
+        - correlation_mode: '0'
+          correlation_tag: ''
+          dependencies: []
+          description: ''
+          expression: '{PostgreSQL Simple Template:pgsql.db.size[{$PG_CONNINFO},{#DBNAME}].last()}>{$PG_DATABASE_SIZE_THRESHOLD}'
+          manual_close: '0'
+          name: PostgreSQL database {#DBNAME} to large on {HOSTNAME} (size={ITEM.LASTVALUE})}
+          priority: '3'
+          recovery_expression: ''
+          recovery_mode: '0'
+          status: '0'
+          tags: []
+          type: '0'
+          url: ''
+        type: '7'
+        username: ''
+      - allowed_hosts: ''
+        authtype: '0'
+        delay: '3600'
+        description: Low level discovery for streaming replication servers which connected
+          to this server.
+        filter:
+          conditions:
+          - {formulaid: A, macro: '{#HOTSTANDBY}', operator: '8', value: ''}
+          evaltype: '0'
+          formula: ''
+        graph_prototypes:
+        - graph_items:
+          - calc_fnc: '2'
+            color: 0000CC
+            drawtype: '5'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.streaming.lag.bytes[{$PG_CONNINFO},{#HOTSTANDBY}]'}
+            sortorder: '0'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: 00CC00
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.streaming.lag.seconds[{$PG_CONNINFO_STANDBY},{#HOTSTANDBY}]'}
+            sortorder: '1'
+            type: '0'
+            yaxisside: '0'
+          height: '200'
+          name: PostgreSQL streaming replication lag with {#HOTSTANDBY}
+          percent_left: '0.0000'
+          percent_right: '0.0000'
+          show_3d: '0'
+          show_legend: '1'
+          show_triggers: '1'
+          show_work_period: '1'
+          type: '0'
+          width: '900'
+          yaxismax: '100.0000'
+          yaxismin: '0.0000'
+          ymax_item_1: '0'
+          ymax_type_1: '0'
+          ymin_item_1: '0'
+          ymin_type_1: '1'
+        host_prototypes: []
+        ipmi_sensor: ''
+        item_prototypes:
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Streaming Replication}
+          authtype: '0'
+          delay: '60'
+          description: ''
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: icmppingloss[{#HOTSTANDBY},10,100,,]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: packet loss with {#HOTSTANDBY}, %
+          params: ''
+          password: ''
+          port: ''
+          preprocessing: []
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '3'
+          units: '%'
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Streaming Replication}
+          authtype: '0'
+          delay: '60'
+          description: ''
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.streaming.lag.bytes[{$PG_CONNINFO},{#HOTSTANDBY}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: streaming lag with {#HOTSTANDBY} in bytes
+          params: ''
+          password: ''
+          port: ''
+          preprocessing: []
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: b
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Streaming Replication}
+          authtype: '0'
+          delay: '60'
+          description: "ATTENTION: This check requires access to the remote server postgresql\
+            \ service, respectively, should be determined access in pg_hba.conf on remote\
+            \ server.\r\nExample:\r\nhost zabbix postgres 1.2.3.4/32 trust"
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.streaming.lag.seconds[{$PG_CONNINFO_STANDBY},{#HOTSTANDBY}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: streaming lag with {#HOTSTANDBY} in seconds
+          params: ''
+          password: ''
+          port: ''
+          preprocessing: []
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: s
+          username: ''
+          value_type: '0'
+          valuemap: []
+        jmx_endpoint: ''
+        key: pgsql.streaming.discovery[{$PG_CONNINFO}]
+        lifetime: 1d
+        name: PostgreSQL streaming stand-by discovery
+        params: ''
+        password: ''
+        port: ''
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trigger_prototypes:
+        - correlation_mode: '0'
+          correlation_tag: ''
+          dependencies: []
+          description: ''
+          expression: '{PostgreSQL Simple Template:icmppingloss[{#HOTSTANDBY},10,100,,].last()}>{$PG_SR_PACKET_LOSS}'
+          manual_close: '0'
+          name: PostgreSQL packet loss between {HOSTNAME} and {#HOTSTANDBY} to high
+            ({ITEM.LASTVALUE})
+          priority: '3'
+          recovery_expression: ''
+          recovery_mode: '0'
+          status: '0'
+          tags: []
+          type: '0'
+          url: ''
+        - correlation_mode: '0'
+          correlation_tag: ''
+          dependencies: []
+          description: ''
+          expression: '{PostgreSQL Simple Template:pgsql.streaming.lag.bytes[{$PG_CONNINFO},{#HOTSTANDBY}].last()}>{$PG_SR_LAG_BYTE}'
+          manual_close: '0'
+          name: PostgreSQL streaming lag between {HOSTNAME} and {#HOTSTANDBY} to high
+            ({ITEM.LASTVALUE})
+          priority: '3'
+          recovery_expression: ''
+          recovery_mode: '0'
+          status: '0'
+          tags: []
+          type: '0'
+          url: ''
+        - correlation_mode: '0'
+          correlation_tag: ''
+          dependencies: []
+          description: ''
+          expression: '{PostgreSQL Simple Template:pgsql.streaming.lag.seconds[{$PG_CONNINFO_STANDBY},{#HOTSTANDBY}].last()}>{$PG_SR_LAG_SEC}'
+          manual_close: '0'
+          name: PostgreSQL streaming lag between {HOSTNAME} and {#HOTSTANDBY} to high
+            ({ITEM.LASTVALUE})
+          priority: '3'
+          recovery_expression: ''
+          recovery_mode: '0'
+          status: '0'
+          tags: []
+          type: '0'
+          url: ''
+        type: '7'
+        username: ''
+      - allowed_hosts: ''
+        authtype: '0'
+        delay: '3600'
+        description: "PostgreSQL tables discovery. Use regular expressions to configure\
+          \ search.\r\nDisabled by default because may add too many items."
+        filter:
+          conditions:
+          - {formulaid: A, macro: '{#TABLENAME}', operator: '8', value: ^public.(products|customers|sessions)$}
+          evaltype: '0'
+          formula: ''
+        graph_prototypes:
+        - graph_items:
+          - calc_fnc: '2'
+            color: 00CC00
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.analyze_count[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '0'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: 0000CC
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.autoanalyze_count[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '1'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: CC0000
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.autovacuum_count[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '2'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: CCCC00
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.vacuum_count[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '3'
+            type: '0'
+            yaxisside: '1'
+          height: '200'
+          name: PostgreSQL table {#TABLENAME} maintenance
+          percent_left: '0.0000'
+          percent_right: '0.0000'
+          show_3d: '0'
+          show_legend: '1'
+          show_triggers: '1'
+          show_work_period: '1'
+          type: '0'
+          width: '900'
+          yaxismax: '100.0000'
+          yaxismin: '0.0000'
+          ymax_item_1: '0'
+          ymax_type_1: '0'
+          ymin_item_1: '0'
+          ymin_type_1: '1'
+        - graph_items:
+          - calc_fnc: '2'
+            color: 00CC00
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.heap_blks_hit[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '0'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: '000000'
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.heap_blks_read[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '1'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: 99FFFF
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.toast_blks_hit[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '2'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: FFFF99
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.tidx_blks_hit[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '3'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: 00CCCC
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.toast_blks_read[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '4'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: CCCC00
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.tidx_blks_read[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '5'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: 0000CC
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.idx_blks_hit[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '6'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: CC0000
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.idx_blks_read[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '7'
+            type: '0'
+            yaxisside: '1'
+          height: '200'
+          name: PostgreSQL table {#TABLENAME} read stats
+          percent_left: '0.0000'
+          percent_right: '0.0000'
+          show_3d: '0'
+          show_legend: '1'
+          show_triggers: '1'
+          show_work_period: '1'
+          type: '0'
+          width: '900'
+          yaxismax: '100.0000'
+          yaxismin: '0.0000'
+          ymax_item_1: '0'
+          ymax_type_1: '0'
+          ymin_item_1: '0'
+          ymin_type_1: '1'
+        - graph_items:
+          - calc_fnc: '2'
+            color: 00CC00
+            drawtype: '5'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.n_live_tup[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '0'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: '666666'
+            drawtype: '5'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.n_dead_tup[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '1'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: 0000CC
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.n_tup_del[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '2'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: CC0000
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.n_tup_hot_upd[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '3'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: 00CCCC
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.n_tup_ins[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '4'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: CCCC00
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.n_tup_upd[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '5'
+            type: '0'
+            yaxisside: '1'
+          height: '200'
+          name: PostgreSQL table {#TABLENAME} rows
+          percent_left: '0.0000'
+          percent_right: '0.0000'
+          show_3d: '0'
+          show_legend: '1'
+          show_triggers: '1'
+          show_work_period: '1'
+          type: '0'
+          width: '900'
+          yaxismax: '100.0000'
+          yaxismin: '0.0000'
+          ymax_item_1: '0'
+          ymax_type_1: '0'
+          ymin_item_1: '0'
+          ymin_type_1: '1'
+        - graph_items:
+          - calc_fnc: '2'
+            color: 00CC00
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.idx_scan[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '0'
+            type: '0'
+            yaxisside: '0'
+          - calc_fnc: '2'
+            color: '000000'
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.seq_scan[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '1'
+            type: '0'
+            yaxisside: '0'
+          - calc_fnc: '2'
+            color: 0000CC
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.idx_tup_fetch[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '2'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: CC0000
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.stat.seq_tup_read[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '3'
+            type: '0'
+            yaxisside: '1'
+          height: '200'
+          name: PostgreSQL table {#TABLENAME} scans
+          percent_left: '0.0000'
+          percent_right: '0.0000'
+          show_3d: '0'
+          show_legend: '1'
+          show_triggers: '1'
+          show_work_period: '1'
+          type: '0'
+          width: '900'
+          yaxismax: '100.0000'
+          yaxismin: '0.0000'
+          ymax_item_1: '0'
+          ymax_type_1: '0'
+          ymin_item_1: '0'
+          ymin_type_1: '1'
+        - graph_items:
+          - calc_fnc: '2'
+            color: 0000CC
+            drawtype: '5'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.size[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '0'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: CC0000
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.index.size[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '1'
+            type: '0'
+            yaxisside: '1'
+          - calc_fnc: '2'
+            color: 00CC00
+            drawtype: '0'
+            item: {host: PostgreSQL Simple Template, key: 'pgsql.table.tuples[{$PG_CONNINFO},{#TABLENAME}]'}
+            sortorder: '2'
+            type: '0'
+            yaxisside: '0'
+          height: '200'
+          name: PostgreSQL table {#TABLENAME} size
+          percent_left: '0.0000'
+          percent_right: '0.0000'
+          show_3d: '0'
+          show_legend: '1'
+          show_triggers: '1'
+          show_work_period: '1'
+          type: '0'
+          width: '900'
+          yaxismax: '100.0000'
+          yaxismin: '0.0000'
+          ymax_item_1: '0'
+          ymax_type_1: '0'
+          ymin_item_1: '0'
+          ymin_type_1: '1'
+        host_prototypes: []
+        ipmi_sensor: ''
+        item_prototypes:
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '900'
+          description: PostgreSQL all indexes size which belongs to a single table.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.index.size[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: table {#TABLENAME} indexes size
+          params: ''
+          password: ''
+          port: ''
+          preprocessing: []
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: b
+          username: ''
+          value_type: '0'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '900'
+          description: PostgreSQL single table size.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.size[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: table {#TABLENAME} size
+          params: ''
+          password: ''
+          port: ''
+          preprocessing: []
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: b
+          username: ''
+          value_type: '0'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '600'
+          description: Number of analyze operations performed on this table.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.analyze_count[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: analyzes'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '9'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '600'
+          description: Number of autoanalyze operations performed on this table.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.autoanalyze_count[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: autoanalyzes'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '9'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '600'
+          description: Number of autovacuum operations performed on this table.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.autovacuum_count[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: autovacuums'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '9'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of buffer hits in this table
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.heap_blks_hit[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: cache blocks hits per second'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '10'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of disk blocks read from this table.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.heap_blks_read[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: cache blocks read per second'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '10'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of buffer hits in all indexes on this table.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.idx_blks_hit[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: index blocks hit per second'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '10'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of disk blocks read from all indexes on this table.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.idx_blks_read[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: index blocks read per second'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '10'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of index scans initiated on this table.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.idx_scan[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: index scans'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '9'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of live rows fetched by index scans.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.idx_tup_fetch[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: tuples read per second by index scans'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '10'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Estimated number of dead rows.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.n_dead_tup[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: dead rows'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '9'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Estimated number of live rows.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.n_live_tup[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: live rows'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '9'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of rows deleted.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.n_tup_del[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: rows deleted per second'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '10'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of rows HOT updated (i.e., with no separate index update
+            required).
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.n_tup_hot_upd[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: rows HOT updated per second'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '10'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of rows inserted.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.n_tup_ins[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: rows inserted per second'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '10'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of rows updated.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.n_tup_upd[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: rows updated per second'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '10'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of sequential scans initiated on this table.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.seq_scan[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: sequential scans'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '9'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of live rows fetched by sequential scans.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.seq_tup_read[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: tuples read per second by sequential scans'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '10'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of buffer hits in this table's TOAST table index (if any).
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.tidx_blks_hit[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: disk blocks hits per second from TOAST indexes'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '10'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of disk blocks read from this table's TOAST table index
+            (if any).
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.tidx_blks_read[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: disk blocks read per second from TOAST indexes'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '10'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of buffer hits in this table's TOAST table (if any).
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.toast_blks_hit[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: disk blocks hits per second from TOAST'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '10'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '120'
+          description: Number of disk blocks read from this table's TOAST table (if
+            any).
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.toast_blks_read[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: disk blocks read per second from TOAST'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '10'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '600'
+          description: Number of vacuum operations performed on this table.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.stat.vacuum_count[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: 'table {#TABLENAME} stat: vacuums'
+          params: ''
+          password: ''
+          port: ''
+          preprocessing:
+          - {params: '', type: '9'}
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '3'
+          valuemap: []
+        - allowed_hosts: ''
+          application_prototypes: []
+          applications:
+          - {name: Table Info}
+          authtype: '0'
+          delay: '900'
+          description: PostgreSQL single table rows count.
+          history: 30d
+          inventory_link: '0'
+          ipmi_sensor: ''
+          jmx_endpoint: ''
+          key: pgsql.table.tuples[{$PG_CONNINFO},{#TABLENAME}]
+          logtimefmt: ''
+          master_item_prototype: []
+          name: table {#TABLENAME} rows count
+          params: ''
+          password: ''
+          port: ''
+          preprocessing: []
+          privatekey: ''
+          publickey: ''
+          snmp_community: ''
+          snmp_oid: ''
+          snmpv3_authpassphrase: ''
+          snmpv3_authprotocol: '0'
+          snmpv3_contextname: ''
+          snmpv3_privpassphrase: ''
+          snmpv3_privprotocol: '0'
+          snmpv3_securitylevel: '0'
+          snmpv3_securityname: ''
+          status: '0'
+          trends: 180d
+          type: '7'
+          units: ''
+          username: ''
+          value_type: '0'
+          valuemap: []
+        jmx_endpoint: ''
+        key: pgsql.table.discovery[{$PG_CONNINFO}]
+        lifetime: 1d
+        name: PostgreSQL database tables discovery
+        params: ''
+        password: ''
+        port: ''
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trigger_prototypes: []
+        type: '7'
+        username: ''
+      groups:
+      - {name: EQUINIX.TESTE}
+      httptests: []
+      items:
+      - allowed_hosts: ''
+        applications:
+        - {name: Background Writer}
+        authtype: '0'
+        delay: '600'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.bgwriter.buffers_alloc[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: buffers allocated
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '10'}
+        - {params: '8192', type: '1'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: b
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Background Writer}
+        authtype: '0'
+        delay: '600'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.bgwriter.buffers_backend[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: buffers written directly by a backend
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '10'}
+        - {params: '8192', type: '1'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: b
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Background Writer}
+        authtype: '0'
+        delay: '600'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.bgwriter.buffers_backend_fsync[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: times a backend had to execute its own fsync
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '9'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Background Writer}
+        authtype: '0'
+        delay: '600'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.bgwriter.buffers_checkpoint[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: buffers written during checkpoints
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '10'}
+        - {params: '8192', type: '1'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: b
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Background Writer}
+        authtype: '0'
+        delay: '600'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.bgwriter.buffers_clean[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: buffers written by the bgwriter
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '10'}
+        - {params: '8192', type: '1'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: b
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Background Writer}
+        authtype: '0'
+        delay: '600'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.bgwriter.checkpoints_req[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: required checkpoints
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '9'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Background Writer}
+        authtype: '0'
+        delay: '600'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.bgwriter.checkpoints_timed[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: checkpoints by timeout
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '9'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Background Writer}
+        authtype: '0'
+        delay: '600'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.bgwriter.checkpoint_sync_time[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: sync time
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '9'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ms
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Background Writer}
+        authtype: '0'
+        delay: '600'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.bgwriter.checkpoint_write_time[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: write time
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '9'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ms
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Background Writer}
+        authtype: '0'
+        delay: '600'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.bgwriter.maxwritten_clean[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: max written
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '9'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ms
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Buffers & Caches}
+        authtype: '0'
+        delay: '300'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.buffercache.clear[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: clear buffers
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '8192', type: '1'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: b
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Buffers & Caches}
+        authtype: '0'
+        delay: '300'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.buffercache.dirty[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: dirty buffers
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '8192', type: '1'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: b
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Buffers & Caches}
+        authtype: '0'
+        delay: '300'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.buffercache.total[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: total buffers
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '8192', type: '1'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: b
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Buffers & Caches}
+        authtype: '0'
+        delay: '300'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.buffercache.used[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: used buffers
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '8192', type: '1'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: b
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Buffers & Caches}
+        authtype: '0'
+        delay: '3600'
+        description: Check cache hit ratio in %.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.cache.hit[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: cache hit ratio
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: '%'
+        username: ''
+        value_type: '0'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Connections}
+        authtype: '0'
+        delay: '60'
+        description: Total count of active clients who connected to the PostgreSQL service
+          and performing work.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.connections.active[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: number of active connections
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Connections}
+        authtype: '0'
+        delay: '60'
+        description: Total count of idle clients connected to the PostgreSQL service.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.connections.idle[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: number of idle connections
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Connections}
+        authtype: '0'
+        delay: '60'
+        description: Total count of idle clients who connected to the PostgreSQL service
+          and have unfinished transaction. This client must be disconnected.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.connections.idle_in_transaction[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: number of idle in transaction connections
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Connections}
+        authtype: '0'
+        delay: '60'
+        description: Total count of clients connected to the PostgreSQL service and
+          blocked by others clients.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.connections.prepared[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: number of prepared connections
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Connections}
+        authtype: '0'
+        delay: '60'
+        description: Total count of clients connected to the PostgreSQL service.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.connections.total[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: total connections
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Connections}
+        authtype: '0'
+        delay: '60'
+        description: Connections percentage of the maximum number of allowed connections
+          (max_connections).
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.connections.total_pct[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: total connections (%)
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: '%'
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Connections}
+        authtype: '0'
+        delay: '60'
+        description: Total count of clients connected to the PostgreSQL service and
+          blocked by others clients.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.connections.waiting[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: number of waiting connections
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Database Status}
+        authtype: '0'
+        delay: '120'
+        description: Number of times disk blocks were found already in the buffer cache,
+          so that a read was not necessary (this only includes hits in the PostgreSQL
+          buffer cache, not the operating system's file system cache)
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.dbstat.sum.blks_hit[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: blocks hit per second
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '10'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Database Status}
+        authtype: '0'
+        delay: '120'
+        description: Number of disk blocks read
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.dbstat.sum.blks_read[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: blocks read per second
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '10'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Database Status}
+        authtype: '0'
+        delay: '120'
+        description: Number of queries canceled due to conflicts with recovery in this
+          database. (Conflicts occur only on standby servers; see pg_stat_database_conflicts
+          for details.).
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.dbstat.sum.conflicts[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: registered conflicts
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '9'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Database Status}
+        authtype: '0'
+        delay: '120'
+        description: Number of deadlocks detected.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.dbstat.sum.deadlocks[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: registered deadlocks
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '9'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Database Status}
+        authtype: '0'
+        delay: '120'
+        description: Total amount of data written to temporary files by queries. All
+          temporary files are counted, regardless of why the temporary file was created,
+          and regardless of the log_temp_files setting.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.dbstat.sum.temp_bytes[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: temp_bytes written
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '9'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: b
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Database Status}
+        authtype: '0'
+        delay: '120'
+        description: Number of temporary files created by queries. All temporary files
+          are counted, regardless of why the temporary file was created (e.g., sorting
+          or hashing), and regardless of the log_temp_files setting.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.dbstat.sum.temp_files[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: temp_files created
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '9'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Database Status}
+        authtype: '0'
+        delay: '120'
+        description: Number of rows deleted by queries.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.dbstat.sum.tup_deleted[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: tuples deleted per second
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '10'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Database Status}
+        authtype: '0'
+        delay: '120'
+        description: Number of rows fetched by queries.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.dbstat.sum.tup_fetched[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: tuples fetched per second
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '10'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Database Status}
+        authtype: '0'
+        delay: '120'
+        description: Number of rows inserted by queries.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.dbstat.sum.tup_inserted[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: tuples inserted per second
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '10'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Database Status}
+        authtype: '0'
+        delay: '120'
+        description: Number of rows returned by queries.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.dbstat.sum.tup_returned[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: tuples returned per second
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '10'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Database Status}
+        authtype: '0'
+        delay: '120'
+        description: Number of rows updated by queries.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.dbstat.sum.tup_updated[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: tuples updated per second
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '10'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Database Status}
+        authtype: '0'
+        delay: '120'
+        description: Number of transactions that have been committed.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.dbstat.sum.xact_commit[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: commits per second
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '10'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Database Status}
+        authtype: '0'
+        delay: '120'
+        description: Number of transactions that have been rolled back.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.dbstat.sum.xact_rollback[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: rollbacks per second
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '10'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Operations}
+        authtype: '0'
+        delay: '60'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.pgstatstatements.avg_query_time[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: 'pg_stat_statements: average query time'
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ms
+        username: ''
+        value_type: '0'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Connections}
+        authtype: '0'
+        delay: '60'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.ping[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: ping
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ms
+        username: ''
+        value_type: '0'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Configuration}
+        authtype: '0'
+        delay: '21600'
+        description: http://www.postgresql.org/docs/9.2/static/runtime-config-wal.html#GUC-FSYNC
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.setting[{$PG_CONNINFO},fsync]
+        logtimefmt: ''
+        master_item: []
+        name: $2
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: '0'
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '1'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Configuration}
+        authtype: '0'
+        delay: '21600'
+        description: http://www.postgresql.org/docs/9.2/static/runtime-config-wal.html#GUC-FULL-PAGE-WRITES
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.setting[{$PG_CONNINFO},full_page_writes]
+        logtimefmt: ''
+        master_item: []
+        name: $2
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: '0'
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '1'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Configuration}
+        authtype: '0'
+        delay: '21600'
+        description: http://www.postgresql.org/docs/9.2/static/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.setting[{$PG_CONNINFO},synchronous_commit]
+        logtimefmt: ''
+        master_item: []
+        name: $2
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: '0'
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '1'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Streaming Replication}
+        authtype: '0'
+        delay: '120'
+        description: Streaming replication stand-bys count.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.streaming.count[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: stand-by count
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Streaming Replication}
+        authtype: '0'
+        delay: '3600'
+        description: 'Streaming replication state: t (true) if service is in recovery
+          mode, and f (false) if server in master mode.'
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.streaming.state[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: recovery state
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: '0'
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '1'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Transactions}
+        authtype: '0'
+        delay: '60'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.transactions.active[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: current max active transaction time
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: s
+        username: ''
+        value_type: '0'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Transactions}
+        authtype: '0'
+        delay: '60'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.transactions.idle[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: current max idle transaction time
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: s
+        username: ''
+        value_type: '0'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Transactions}
+        authtype: '0'
+        delay: '60'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.transactions.prepared[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: current max prepared transaction time
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: s
+        username: ''
+        value_type: '0'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Transactions}
+        authtype: '0'
+        delay: '60'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.transactions.waiting[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: current max waiting transaction time
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: s
+        username: ''
+        value_type: '0'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: General Information}
+        authtype: '0'
+        delay: '60'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.uptime[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: service uptime
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: uptime
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: General Information}
+        authtype: '0'
+        delay: '3600'
+        description: Connections percentage of the maximum number of allowed connections
+          (max_connections).
+        history: 1d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.version[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: postgresql version
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: '0'
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '4'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Write-Ahead Logging}
+        authtype: '0'
+        delay: '120'
+        description: Number of WAL segments stored in pg_xlog directory.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.wal.count[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: WAL segments count
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: Write-Ahead Logging}
+        authtype: '0'
+        delay: '120'
+        description: WAL write in bytes,.
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: pgsql.wal.write[{$PG_CONNINFO}]
+        logtimefmt: ''
+        master_item: []
+        name: WAL write
+        params: ''
+        password: ''
+        port: ''
+        preprocessing:
+        - {params: '', type: '9'}
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: b
+        username: ''
+        value_type: '3'
+        valuemap: []
+      - allowed_hosts: ''
+        applications:
+        - {name: General Information}
+        authtype: '0'
+        delay: '30'
+        description: ''
+        history: 30d
+        inventory_link: '0'
+        ipmi_sensor: ''
+        jmx_endpoint: ''
+        key: proc.num[{$PG_PROCESS_NAME}]
+        logtimefmt: ''
+        master_item: []
+        name: number of running processes $1
+        params: ''
+        password: ''
+        port: ''
+        preprocessing: []
+        privatekey: ''
+        publickey: ''
+        snmp_community: ''
+        snmp_oid: ''
+        snmpv3_authpassphrase: ''
+        snmpv3_authprotocol: '0'
+        snmpv3_contextname: ''
+        snmpv3_privpassphrase: ''
+        snmpv3_privprotocol: '0'
+        snmpv3_securitylevel: '0'
+        snmpv3_securityname: ''
+        status: '0'
+        trends: 180d
+        type: '7'
+        units: ''
+        username: ''
+        value_type: '3'
+        valuemap: []
+      macros:
+      - {macro: '{$PG_CACHE_HIT_RATIO}', value: '90'}
+      - {macro: '{$PG_CHECKPOINTS_REQ_THRESHOLD}', value: '5'}
+      - {macro: '{$PG_CONFLICTS_THRESHOLD}', value: '0'}
+      - {macro: '{$PG_CONNINFO}', value: -h 127.0.0.1 -p 5432 -U postgres -d zabbix}
+      - {macro: '{$PG_CONNINFO_STANDBY}', value: -p 5432 -U postgres -d zabbix}
+      - {macro: '{$PG_CONN_IDLE_IN_TRANSACTION}', value: '3'}
+      - {macro: '{$PG_CONN_TOTAL_PCT}', value: '90'}
+      - {macro: '{$PG_CONN_WAITING}', value: '0'}
+      - {macro: '{$PG_DATABASE_SIZE_THRESHOLD}', value: '100000000000'}
+      - {macro: '{$PG_DEADLOCKS_THRESHOLD}', value: '0'}
+      - {macro: '{$PG_LONG_QUERY_THRESHOLD}', value: '30'}
+      - {macro: '{$PG_PING_THRESHOLD_MS}', value: '1000'}
+      - {macro: '{$PG_PROCESS_NAME}', value: postmaster}
+      - {macro: '{$PG_SR_LAG_BYTE}', value: '50000000'}
+      - {macro: '{$PG_SR_LAG_SEC}', value: '600'}
+      - {macro: '{$PG_SR_PACKET_LOSS}', value: '10'}
+      - {macro: '{$PG_UPTIME_THRESHOLD}', value: '600'}
+      name: PostgreSQL Simple Template
+      screens: []
+      template: PostgreSQL Simple Template
+      templates: []
+    triggers:
+    - correlation_mode: '0'
+      correlation_tag: ''
+      dependencies: []
+      description: ''
+      expression: '{PostgreSQL Simple Template:pgsql.transactions.active[{$PG_CONNINFO}].last()}>{$PG_LONG_QUERY_THRESHOLD}'
+      manual_close: '0'
+      name: PostgreSQL active transaction to long on {HOSTNAME} (time={ITEM.LASTVALUE})
+      priority: '3'
+      recovery_expression: ''
+      recovery_mode: '0'
+      status: '0'
+      tags: []
+      type: '0'
+      url: ''
+    - correlation_mode: '0'
+      correlation_tag: ''
+      dependencies: []
+      description: ''
+      expression: '{PostgreSQL Simple Template:pgsql.cache.hit[{$PG_CONNINFO}].last()}<{$PG_CACHE_HIT_RATIO}'
+      manual_close: '0'
+      name: PostgreSQL cache hit ratio too low on {HOSTNAME} ({ITEM.LASTVALUE})
+      priority: '2'
+      recovery_expression: ''
+      recovery_mode: '0'
+      status: '0'
+      tags: []
+      type: '0'
+      url: ''
+    - correlation_mode: '0'
+      correlation_tag: ''
+      dependencies: []
+      description: ''
+      expression: '{PostgreSQL Simple Template:pgsql.dbstat.sum.deadlocks[{$PG_CONNINFO}].last()}>{$PG_DEADLOCKS_THRESHOLD}'
+      manual_close: '0'
+      name: PostgreSQL deadlock occured on {HOSTNAME}
+      priority: '3'
+      recovery_expression: ''
+      recovery_mode: '0'
+      status: '0'
+      tags: []
+      type: '0'
+      url: ''
+    - correlation_mode: '0'
+      correlation_tag: ''
+      dependencies: []
+      description: ''
+      expression: '{PostgreSQL Simple Template:pgsql.connections.idle_in_transaction[{$PG_CONNINFO}].last()}>{$PG_CONN_IDLE_IN_TRANSACTION}'
+      manual_close: '0'
+      name: PostgreSQL idle in transaction connections to high on {HOSTNAME} ({ITEM.LASTVALUE})
+      priority: '3'
+      recovery_expression: ''
+      recovery_mode: '0'
+      status: '0'
+      tags: []
+      type: '0'
+      url: ''
+    - correlation_mode: '0'
+      correlation_tag: ''
+      dependencies: []
+      description: ''
+      expression: '{PostgreSQL Simple Template:pgsql.transactions.idle[{$PG_CONNINFO}].last()}>{$PG_LONG_QUERY_THRESHOLD}'
+      manual_close: '0'
+      name: PostgreSQL idle transaction to long on {HOSTNAME} ({ITEM.LASTVALUE})
+      priority: '3'
+      recovery_expression: ''
+      recovery_mode: '0'
+      status: '0'
+      tags: []
+      type: '0'
+      url: ''
+    - correlation_mode: '0'
+      correlation_tag: ''
+      dependencies: []
+      description: ''
+      expression: '{PostgreSQL Simple Template:pgsql.connections.waiting[{$PG_CONNINFO}].last()}>{$PG_CONN_WAITING}'
+      manual_close: '0'
+      name: PostgreSQL number of waiting connections to high on {HOSTNAME} ({ITEM.LASTVALUE})
+      priority: '3'
+      recovery_expression: ''
+      recovery_mode: '0'
+      status: '0'
+      tags: []
+      type: '0'
+      url: ''
+    - correlation_mode: '0'
+      correlation_tag: ''
+      dependencies: []
+      description: ''
+      expression: '{PostgreSQL Simple Template:pgsql.dbstat.sum.conflicts[{$PG_CONNINFO}].last()}>{$PG_CONFLICTS_THRESHOLD}'
+      manual_close: '0'
+      name: PostgreSQL recovery conflict occured on {HOSTNAME}
+      priority: '3'
+      recovery_expression: ''
+      recovery_mode: '0'
+      status: '0'
+      tags: []
+      type: '0'
+      url: ''
+    - correlation_mode: '0'
+      correlation_tag: ''
+      dependencies: []
+      description: ''
+      expression: '{PostgreSQL Simple Template:pgsql.bgwriter.checkpoints_req[{$PG_CONNINFO}].last()}>{$PG_CHECKPOINTS_REQ_THRESHOLD}'
+      manual_close: '0'
+      name: PostgreSQL required checkpoints occurs to frequently on {HOSTNAME}
+      priority: '3'
+      recovery_expression: ''
+      recovery_mode: '0'
+      status: '0'
+      tags: []
+      type: '0'
+      url: ''
+    - correlation_mode: '0'
+      correlation_tag: ''
+      dependencies: []
+      description: ''
+      expression: '{PostgreSQL Simple Template:pgsql.ping[{$PG_CONNINFO}].last()}>{$PG_PING_THRESHOLD_MS}'
+      manual_close: '0'
+      name: PostgreSQL response to long on {HOSTNAME} ({ITEM.LASTVALUE}
+      priority: '3'
+      recovery_expression: ''
+      recovery_mode: '0'
+      status: '0'
+      tags: []
+      type: '0'
+      url: ''
+    - correlation_mode: '0'
+      correlation_tag: ''
+      dependencies: []
+      description: ''
+      expression: '{PostgreSQL Simple Template:proc.num[{$PG_PROCESS_NAME}].last()}=0'
+      manual_close: '0'
+      name: PostgreSQL service not running on {HOSTNAME}
+      priority: '4'
+      recovery_expression: ''
+      recovery_mode: '0'
+      status: '0'
+      tags: []
+      type: '0'
+      url: ''
+    - correlation_mode: '0'
+      correlation_tag: ''
+      dependencies: []
+      description: ''
+      expression: '{PostgreSQL Simple Template:pgsql.uptime[{$PG_CONNINFO}].last()}<{$PG_UPTIME_THRESHOLD}'
+      manual_close: '0'
+      name: PostgreSQL service was restarted on {HOSTNAME} (uptime={ITEM.LASTVALUE})
+      priority: '3'
+      recovery_expression: ''
+      recovery_mode: '0'
+      status: '0'
+      tags: []
+      type: '0'
+      url: ''
+    - correlation_mode: '0'
+      correlation_tag: ''
+      dependencies: []
+      description: ''
+      expression: '{PostgreSQL Simple Template:pgsql.connections.total_pct[{$PG_CONNINFO}].last()}>{$PG_CONN_TOTAL_PCT}'
+      manual_close: '0'
+      name: PostgreSQL total number of connections to high on {HOSTNAME} ({ITEM.LASTVALUE})
+      priority: '3'
+      recovery_expression: ''
+      recovery_mode: '0'
+      status: '0'
+      tags: []
+      type: '0'
+      url: ''
+    - correlation_mode: '0'
+      correlation_tag: ''
+      dependencies: []
+      description: ''
+      expression: '{PostgreSQL Simple Template:pgsql.transactions.waiting[{$PG_CONNINFO}].last()}>{$PG_LONG_QUERY_THRESHOLD}'
+      manual_close: '0'
+      name: PostgreSQL waiting transaction to long on {HOSTNAME} ({ITEM.LASTVALUE})
+      priority: '3'
+      recovery_expression: ''
+      recovery_mode: '0'
+      status: '0'
+      tags: []
+      type: '0'
+      url: ''
+    version: '3.4'
