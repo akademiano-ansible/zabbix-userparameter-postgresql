@@ -1,2 +1,21 @@
 ---
 # tasks file for egeneralov.zabbix-userparameter-postgresql
+
+- name: "configure : postgresql userparameter"
+  copy:
+    src: "userparameter_postgresql.conf"
+    dest: "/etc/zabbix/zabbix_agentd.d/userparameter_postgresql.conf"
+  register: zbx_userparameter_pgdg
+
+- name: "(re)start : zabbix-agent"
+  systemd:
+    name: zabbix-agent
+    state: "{% if zbx_userparameter_pgdg is changed %}re{% endif %}started"
+
+- name: "configure : create extension"
+  become: true
+  become_user: postgres
+  postgresql_ext:
+    name: pg_buffercache
+    db: "{{ item.database }}"
+  with_items: "{{ pgdg_users }}"
